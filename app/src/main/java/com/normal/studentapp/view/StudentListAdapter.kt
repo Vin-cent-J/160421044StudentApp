@@ -59,7 +59,7 @@ class StudentListAdapter(val studentList:ArrayList<Student>):RecyclerView.Adapte
     }
 
     override fun onButtonClick(v: View) {
-        val id = v.tag.toString().toInt()
+        val id = v.tag.toString()
         val action = StudentListFragmentDirections.actionStudentListFragmentToDetailFragment(id)
         Navigation.findNavController(v).navigate(action)
     }
